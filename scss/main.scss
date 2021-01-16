@@ -76,7 +76,7 @@ main {
 .main {
     transform: translate(-200%, 0px);
     transition: 0.4s transform;
-    
+
     &.active {
         transform: translate(0%, 0px);
         transition: 0.4s transform;
@@ -136,9 +136,9 @@ main {
 // .mainTwo
 .mainTwo {
     position: relative;
-    transform: translate(0px, 400%);
+    transform: translate(400%,0px );
     transition: 0.4s transform ease-in;
-
+    
     &.active {
         transform: translate(0px, 0px);
         transition: 0.6s transform ease-out;
