@@ -4,109 +4,90 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
 
-    <!-- Font's Link -->
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap"
-        rel="stylesheet">
-    <!-- Styles -->
+    <!-- Default link -->
     <link rel="stylesheet" href="styles/main.css">
-    <title>Document</title>
+
+    <!-- Fonts   -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@700;800&display=swap"
+        rel="stylesheet">
+
+    <title>Frontend Mentor | Rock, Paper, Scissors</title>
+
 </head>
 
 <body>
+
     <!-- Header -->
     <header>
-
         <div class="header">
-
-            <!-- Rock paper scissors image -->
             <div class="header__img">
                 <img src="images/logo.svg" alt="logo">
             </div>
-
-            <!-- Score 12 -->
             <div class="header__score">
                 <p>score</p>
                 <p>12</p>
             </div>
         </div>
+
     </header>
-
-
     <main>
+        <div class="main">
 
-        <section class="main active">
-            <!-- Triangle -->
-            <div class="main__traingle">
-                <img src="images/bg-triangle.svg" alt="bg-triangle">
-            </div>
-            <div class="main__gameStart">
-
-                <!-- Paper -->
-                <div class="main__gameStart--paper">
-                    <img src="images/icon-paper.svg" alt="icon-paper">
-                </div>
-
-                <!-- Scissors -->
-                <div class="main__gameStart--scissors">
-                    <img src="images/icon-scissors.svg" alt="icon-scissors">
-                </div>
-
-                <!-- Rock -->
-                <div class="main__gameStart--rock">
-                    <img src="images/icon-rock.svg" alt="icon-rock">
-                </div>
-            </div>
-        </section>
-
-        <!-- Answer Picked -->
-
-        <section class="answer  ">
-
-            <div class="answer__container">
-
-                <!-- Human Answer Picked -->
-                <div class="answer__container--human  circle">
-                    <div class="game ">
-                        <img src="images/icon-paper.svg" alt="icon-paper">
-                    </div>
-                </div>
-                <p>You Picked</p>
-
+            <!-- Main Triangle -->
+            <div class="main__triangle">
+                <img src="images/bg-triangle.svg" alt="">
             </div>
 
-            <!-- Computer Picked game -->
-            <div class="answer__container">
-                <div class="answer__container--computer circle ">
-                    <div class="game  main__gameStart--scissors">
-                        <img src="images/icon-paper.svg" alt="icon-paper">
-
-                    </div>
-
+            <!--Game Start Here  -->
+            <div class="main__games">
+                <div class="main__games--hand">
+                    <img src="images/icon-paper.svg" alt="Paper">
                 </div>
-                <p>The House Picked</p>
+
+                <div class="main__games--scissors">
+                    <img src="images/icon-scissors.svg" alt="Scissors">
+                </div>
+
+                <div class="main__games--rock">
+                    <img src="images/icon-rock.svg" alt="Rock">
+                </div>
             </div>
-
-        </section>
-
-
-    </main>
-
-
-    <!-- Footer -->
-    <footer>
-        <div class="footer__rule">
-            <img src="images/image-rules.svg" alt="">
         </div>
 
-        <div class="footer">
+
+        <div class="mainTwo">
+
+            <!-- Main game Starts -->
+            <div class="mainTwo__game">
+
+                <div class="mainTwo__game--human main__games--hand circle">
+                    <img src="images/icon-paper.svg" alt="icon-paper">
+                    <p>You Picked</p>
+                </div>
+                
+                <div class="mainTwo__game--computer main__games--rock circle ">
+                    <img src="images/icon-rock.svg" alt="">
+                    <p>The House Picked</p>
+                </div>
+                <div class="mainTwo__game--winOrLose active ">
+                    <p>You Lose</p>
+                    <button>Play Again</button>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="footer__img">
+            <img src="images/image-rules.svg" alt="">
+            <button>X</button>
+        </div>
+        <div class="footer__btn">
             <button>Rules</button>
         </div>
-
     </footer>
-
-    <script src="script/main.js"></script>
 </body>
 
 </html>
