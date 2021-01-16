@@ -17,6 +17,7 @@ html {
 body {
     font-family: 'Barlow Semi Condensed', sans-serif;
     background: colorz('bg');
+    overflow-y: hidden;
 }
 
 header {
@@ -75,10 +76,10 @@ main {
 .main {
     transform: translate(-200%, 0px);
     transition: 0.4s transform;
-
+    
     &.active {
-        transition: 0.4s transform;
         transform: translate(0%, 0px);
+        transition: 0.4s transform;
 
     }
 
@@ -135,8 +136,16 @@ main {
 // .mainTwo
 .mainTwo {
     position: relative;
+    transform: translate(0px, 400%);
+    transition: 0.4s transform ease-in;
+
+    &.active {
+        transform: translate(0px, 0px);
+        transition: 0.6s transform ease-out;
+    }
 
     &__game {
+        position: relative;
         margin: 0 auto;
         width: 85%;
         @include flex(space-between, center);
@@ -148,7 +157,7 @@ main {
             flex-direction: column;
             top: 39vh;
             transition: 0.2s transform;
-            right: 25vw;
+            right: 19vw;
             transform: translate(-300%, 0px);
 
             &.active {
@@ -157,7 +166,7 @@ main {
             }
 
             p {
-                font-size: 4rem;
+                font-size: 4.5rem;
                 color: #fff;
                 text-transform: uppercase;
             }
@@ -251,7 +260,7 @@ footer {
             background: #fff;
 
             &.active {
-                transform: translate(0px, 0px);
+                transform: translate(0%, 0%);
                 transition: 0.6s transform;
             }
 
@@ -260,8 +269,8 @@ footer {
             }
 
             button {
-                margin-top: 80px;
-                font-size: 3rem;
+                margin-top: 100px;
+                font-size: 2.5rem;
                 outline: none;
                 border: none;
             }

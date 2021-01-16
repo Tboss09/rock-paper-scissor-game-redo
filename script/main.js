@@ -1,49 +1,39 @@
-(
-    function () {
+let game = (function () {
+    const gameStepOne = document.querySelector('.main'),
+        gameStepTwo = document.querySelector('.mainTwo'),
+        nextStep = gameStepTwo.querySelectorAll('.circle img'),
+        [humanPicked, computerPicked] = nextStep,
 
-        const rockPaperAndScissorImgs =
-            document.querySelectorAll('.main__gameStart img'),
-            gameStepOne = document.querySelector('.main'),
-            gameStepTwo = document.querySelector('.answer'),
-            gameRulesButton = document.querySelector('footer button'),
-            gameRulesImg = document.querySelector('.footer__rule'),
-            humanPicked = gameStepTwo.querySelector('.game img');
+        // Footer 
+        rulesButton = document.querySelector('.footer__btn button'),
+        rulesImg = document.querySelector('.footer__img'),
+        closeImgButton = document.querySelector('.footer__img button'),
 
-        rockPaperAndScissorImgs.forEach(img => {
-            img.addEventListener('click', showGameStepTwo)
+        rockPaperAndScissor = document.querySelectorAll('.main__games img');
 
-        })
 
-        // Game Rules
-        gameRulesButton.addEventListener("click", showGameRule);
 
-        // Functions 
-        function showGameStepTwo() {
-            const imageClicked = this;
-            gameStepOne.classList.remove('active'); //After User Clicks One Of The Buttons, Show THe Next Step
-            gameStepTwo.classList.add('active'); //Next Step
-            humanPicked.setAttribute('src', imageClicked.src);
-            humanPicked.parentNode.classList.add(imageClicked.parentNode.classList.value)
-            console.log(imageClicked.parentNode.classList.value);
+    rulesButton.addEventListener('click', openRule)// Open Rules Image
 
-            // Computer Random values
-            const mappedArray = [...rockPaperAndScissorImgs].map(img => img.src);
-            console.log(mappedArray[Math.floor(Math.random() * mappedArray.length)]);
+    closeImgButton.addEventListener('click', closeRule) //close RUles Image
 
-        }
+    rockPaperAndScissor.forEach(img => (img.addEventListener('click', showStepTwo)))
 
-        function showGameRule() {
-            gameRulesImg.classList.toggle("active")
-            //  if rules image is down    
-            if (gameRulesImg.classList.contains('active')) {
-                gameRulesButton.innerHTML = 'x';
-                gameRulesButton.classList.add('active')
-                return;
-            }
-            gameRulesButton.classList.remove('active');
-            gameRulesButton.innerHTML = 'RULES';
-            console.log(this.innerHTML, "was clicked");
-            return;
-        }
+    function openRule() {
+        rulesImg.classList.add('active')
     }
-)()
+    
+    function closeRule() {
+        rulesImg.classList.remove('active')
+
+    }
+
+
+    function showStepTwo() {
+        let imageClicked = this;
+        gameStepOne.classList.remove('active');
+        gameStepTwo.classList.add('active');
+        humanPicked.src = imageClicked.src; //Human Picked Answer === imagePicked answer
+        humanPicked.parentNode.classList.add(imageClicked.parentNode.classList.value)
+    }
+})();
