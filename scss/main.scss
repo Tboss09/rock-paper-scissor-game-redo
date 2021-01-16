@@ -146,14 +146,13 @@ main {
             position: absolute;
             @include flex(center, center);
             flex-direction: column;
-            top: 30vh;
+            top: 39vh;
             transition: 0.2s transform;
-            right: 22vw;
+            right: 25vw;
             transform: translate(-300%, 0px);
-            
+
             &.active {
                 transform: translate(0%, 0px);
-                opacity: 1;
                 transition: 0.5s transform;
             }
 
@@ -180,15 +179,15 @@ main {
         }
     }
 
-    margin-top: -200px;
+    margin-top: -220px;
 
     .circle {
         border-radius: 50%;
         position: relative;
         background: #00000031;
         margin: 20px;
-        height: 32vw;
-        width: 32vw;
+        height: 29vw;
+        width: 29vw;
         @include flex(center, center);
 
         p {
@@ -202,8 +201,8 @@ main {
         }
 
         img {
-            width: 90px;
-            height: 90px;
+            width: 80px;
+            height: 80px;
             border-radius: 50%;
             padding: 20px;
             background: #fff;
@@ -236,7 +235,7 @@ main {
 
 footer {
     @include flex(center, center);
-    margin-top: 30vh;
+    margin-top: 36vh;
 
     .footer {
         &__img {
