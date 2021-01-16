@@ -55,6 +55,7 @@ let game = (function () {
         function computerAnswer() {
             const randomImg = [...rockPaperAndScissor].map(img => img.src);
             const rnd = Math.floor(Math.random() * randomImg.length)
+         
             setTimeout(() => {
                 clearInterval(changeRandomImages)
                 computerPicked.src = randomImg[rnd];
