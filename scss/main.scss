@@ -160,7 +160,7 @@ main {
             flex-direction: column;
             top: 39vh;
             transition: 0.2s transform;
-            right: 19vw;
+            right: 15vw;
             transform: translate(-300%, 0px);
 
             &.active {
@@ -169,7 +169,7 @@ main {
             }
 
             p {
-                font-size: 4.5rem;
+                font-size: 4rem;
                 color: #fff;
                 text-transform: uppercase;
             }
@@ -230,7 +230,30 @@ main {
     //     }
 
     // }
+.pulse{
+    animation: pulseTwo 2s linear ;
 
+    @keyframes pulseTwo {
+        
+
+        25% {
+            transform: scale(1 );
+            
+        }
+
+        50% {
+            transform: scale(1.6);
+        }
+
+        75% {
+            transform: scale(1.5);
+        }
+
+        75% {
+            transform: scale(1);
+        }
+    }
+}
     .circle {
         border-radius: 50%;
         position: relative;
