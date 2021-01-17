@@ -87,6 +87,7 @@ main {
 
     &__triangle {
         @include flex(center, center);
+        @include flex(center, center);
 
         img {
             width: 50%;
