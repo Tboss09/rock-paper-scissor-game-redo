@@ -38,6 +38,7 @@ let game = (function () {
         gameStepOne.classList.add('active');
         gameStepTwo.classList.remove('active');
         winOrLose.classList.remove('active');
+        
     }
 
     function openRule() {
@@ -61,13 +62,11 @@ let game = (function () {
         function humanAnswer() {
             // Shows what the user picked
             humanPicked.src = imageClicked.src; //Human Picked Answer === imagePicked answer
-            humanPicked.parentNode.classList.add(imageClicked.parentNode.classList.value)
+            humanPicked.parentNode.className = `mainTwo__game--human  circle active ${imageClicked.parentNode.classList.value}`
+            humanPicked.className =` animate__animated animate__bounceInLeft` 
             return humanPicked.src;
         }
-
         function computerAnswer() {
-
-
             let interval = setInterval(() => {
                 computerPicked.innerHTML = randomImg();
             }, 200);
@@ -101,6 +100,7 @@ let game = (function () {
                 else if (humanAnswer() === computerImg) {
                     winOrLose.classList.add('active');
                     winOrLoseAnswer.textContent = "A Draw"
+                    console.log(humanAnswer())
                 }
 
                 else {

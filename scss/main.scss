@@ -158,12 +158,12 @@ main {
             position: absolute;
             @include flex(center, center);
             flex-direction: column;
-            width: 175px;
-            margin-left: -82.5px; 
+            width: 200px;
+            margin-left: -100px;
             top: 35vh;
             transition: 0.2s transform;
-            left:50%;
-            transform: translate(-300%, 0px);
+            left: 50%;
+            transform: translate(-1000%, 0px);
 
             &.active {
                 transform: translate(0%, 0px);
@@ -171,7 +171,7 @@ main {
             }
 
             p {
-                font-size: 4rem;
+                font-size: 3.5rem;
                 color: #fff;
                 text-transform: uppercase;
             }
@@ -231,32 +231,8 @@ main {
     //         transition: 0.3s transform;
     //     }
 
+
     // }
-    .pulse {
-        animation: pulseTwo 2s linear;
-
-        @keyframes pulseTwo {
-
-
-            25% {
-                transform: scale(1);
-
-            }
-
-            50% {
-                transform: scale(0.6);
-            }
-
-            75% {
-                transform: scale(0.9);
-            }
-
-            75% {
-                transform: scale(1);
-            }
-        }
-    }
-
     .circle {
         border-radius: 50%;
         position: relative;
@@ -294,6 +270,11 @@ main {
             padding: 0px;
             bottom: 0;
 
+
+        }
+
+        &.active {
+
             &::before {
                 content: '';
                 position: absolute;
@@ -323,7 +304,6 @@ main {
                     }
                 }
             }
-
         }
 
         &.main__games--hand {
@@ -346,7 +326,7 @@ footer {
 
     .footer {
         &__img {
-            transform: translate(0px, -150%);
+            transform: translate(0px, -200%);
             transition: 0.3s transform;
             @include flex(center, center);
             flex-direction: column;
@@ -391,3 +371,5 @@ footer {
         }
     }
 }
+
+@import './desktop';
