@@ -75,14 +75,13 @@ main {
 
 .main {
     transform: translate(-200%, 0px);
-    transition: 0.3s transform;
-    transition: 0.4s transform, opacity 0.4s;
     opacity: 0;
+    transition: 0.5s transform;
 
     &.active {
         opacity: 1;
         transform: translate(0%, 0px), ;
-        transition: 0.4s transform, opacity 0.4s;
+        transition: 0.4s transform;
 
     }
 
