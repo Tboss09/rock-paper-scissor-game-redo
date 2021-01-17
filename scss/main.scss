@@ -76,13 +76,13 @@ main {
 .main {
     transform: translate(-200%, 0px);
     transition: 0.3s transform;
-    transition: 0.4s transform,opacity 0.4s;
+    transition: 0.4s transform, opacity 0.4s;
     opacity: 0;
 
     &.active {
         opacity: 1;
-        transform: translate(0%, 0px),;
-        transition: 0.4s transform,opacity 0.4s;
+        transform: translate(0%, 0px), ;
+        transition: 0.4s transform, opacity 0.4s;
 
     }
 
@@ -158,9 +158,11 @@ main {
             position: absolute;
             @include flex(center, center);
             flex-direction: column;
-            top: 39vh;
+            width: 175px;
+            margin-left: -82.5px; 
+            top: 35vh;
             transition: 0.2s transform;
-            right: 15vw;
+            left:50%;
             transform: translate(-300%, 0px);
 
             &.active {
@@ -230,30 +232,31 @@ main {
     //     }
 
     // }
-.pulse{
-    animation: pulseTwo 2s linear ;
+    .pulse {
+        animation: pulseTwo 2s linear;
 
-    @keyframes pulseTwo {
-        
+        @keyframes pulseTwo {
 
-        25% {
-            transform: scale(1 );
-            
-        }
 
-        50% {
-            transform: scale(1.6);
-        }
+            25% {
+                transform: scale(1);
 
-        75% {
-            transform: scale(1.5);
-        }
+            }
 
-        75% {
-            transform: scale(1);
+            50% {
+                transform: scale(0.6);
+            }
+
+            75% {
+                transform: scale(0.9);
+            }
+
+            75% {
+                transform: scale(1);
+            }
         }
     }
-}
+
     .circle {
         border-radius: 50%;
         position: relative;
@@ -270,7 +273,7 @@ main {
             letter-spacing: 1.5px;
             font-size: 1.5rem;
             color: #fff;
-            top: 25vh;
+            top: 23vh;
         }
 
         img {
