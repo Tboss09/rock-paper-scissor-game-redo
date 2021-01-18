@@ -74,28 +74,51 @@ let game = (function () {
             setTimeout(() => {
                 clearInterval(interval);
                 computerPicked.innerHTML = randomImg();
-                const game = {
-                    scissor: "http://127.0.0.1:5500/images/icon-scissors.svg",
-                    rock: "http://127.0.0.1:5500/images/icon-rock.svg",
-                    paper: "http://127.0.0.1:5500/images/icon-paper.svg"
-                }
+                const games= ["images/icon-scissors.svg",
+      "images/icon-rock.svg",
+      "images/icon-paper.svg"]
+      
                 const computerImg = computerPicked.querySelector('img').src;
                 console.log(computerPicked.querySelector('img').src)
 
-                // if (humanAnswer() === game.rock && computerImg === game.scissor) {
-                //     winOrLose.classList.add('active');
-                //     winOrLoseAnswer.textContent = "You Won"
-                //     console.log('same');
-                // }
-                if (humanAnswer() === game.rock && computerImg == game.scissor 
-                ||humanAnswer() === game.paper && computerImg == game.rock 
-                ||humanAnswer() === game.scissor && computerImg == game.paper 
-                ) {
-                    winOrLose.classList.add('active');
+
+                if (humanAnswer().includes(games[0]) && computerImg.includes(games[2] )
+                				) {
+                                   winOrLose.classList.add('active');
                     winOrLoseAnswer.textContent = "You Won"
                     score++;
                     pTwo.textContent = score;
                 }
+
+
+
+
+
+   else if (humanAnswer().includes(games[1]) && computerImg.includes(games[2] )
+                				) {
+                                   winOrLose.classList.add('active');
+                    winOrLoseAnswer.textContent = "You Won"
+                    score++;
+                    pTwo.textContent = score;
+                }
+                
+                
+                
+                
+                
+       else if (humanAnswer().includes(games[2]) && computerImg.includes(games[1] )
+                				) {
+                                   winOrLose.classList.add('active');
+                    winOrLoseAnswer.textContent = "You Won"
+                    score++;
+                    pTwo.textContent = score;
+                }
+
+
+
+
+
+
 
                 else if (humanAnswer() === computerImg) {
                     winOrLose.classList.add('active');
