@@ -94,7 +94,7 @@ let game = (function () {
 
 
 
-   else if (humanAnswer().includes(games[1]) && computerImg.includes(games[2] )
+   else if (humanAnswer().includes(games[1]) && computerImg.includes(games[0] )
                 				) {
                                    winOrLose.classList.add('active');
                     winOrLoseAnswer.textContent = "You Won"
